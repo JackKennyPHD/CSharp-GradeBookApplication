@@ -113,42 +113,28 @@ namespace GradeBook.GradeBooks
             var gpa = 0;
             switch (letterGrade)
             {
-
                 case 'A':
-                    {
-                        gpa = 4;
-                        break;
-                    }
-
+                    gpa = 4;
+                    break;
                 case 'B':
-                    { 
                     gpa = 3;
                     break;
-            }
 
                 case 'C':
-                {
                     gpa = 2;
                     break;
-                }
 
                 case 'D':
-                {
                     gpa = 1;
                     break;
-                }
-
                 case 'F':
-                {
                     gpa = 0;
                     break;
-                }
             }
 
             if (IsWeighted && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled))
-            {
                 gpa++;
-            }
+            
             return gpa;
         }
 
